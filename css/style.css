@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+@media (max-width: 760px) {
+  /* Grid estrutural */
+  .estrutura {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+  }
+
+  /* Header */
+  .header {
+    grid-area: header;
+    align-content: flex-start;
+    display: flex;
+    padding: 30px;
+  }
+  .header .logo {
+    margin: 0 auto;
+  }
+
+  /* Content */
+  .content {
+    grid-area: content;
+    padding: 30px;
+  }
+
+  /* Account */
+
+  .account {
+    display: flex;
+  }
+  .account > a {
+    display: block;
+    background-color: #004481;
+    padding: 10px;
+    height: 100%;
+    border-radius: 50%;
+    align-self: center;
+    margin-left: 20px;
+  }
+}
+
+/*  */
+
+.content h1 {
+  font-size: 1.875em;
+  color: #004481;
+  font-weight: bold;
+  margin-top: 30px;
+  line-height: 1.5;
+}
+.content > p {
+  color: #889fb4;
+  font-size: 0.875em;
+}
+
+/* Formulario */
+
+.content .form {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 0 30px 0;
+}
+.content .form label {
+  font-size: 0.75em;
+  color: #004481;
+  flex: 1 1 500px;
+}
+.content .form input {
+  color: #004481;
+  border: none;
+  border-bottom: 2px solid #004481;
+  font-size: 1.5em;
+  outline: none;
+  flex: 1;
+  max-width: 210px;
+}
+.content .form input::placeholder {
+  font-size: 1em;
+  color: #004481;
+  position: relative;
+  transform: translateY(7px);
+}
+
+.content .form button {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #004481;
+  cursor: pointer;
+
+  flex: 1 1 32px;
+  justify-content: flex-end;
+  display: flex;
+}
+.content .form img {
+  align-self: center;
+  padding: 10px;
+  transition: 0.5s;
+  clip-path: circle();
+  /* margin: 0 auto; */
+}
+.content .form img:hover {
+  background-color: rgba(44, 44, 44, 0.1);
+}
+
+.content p:nth-of-type(2) {
+  display: block;
+  color: #004481;
+  text-align: center;
+}
+
+/* Ajuda */
+
+.ajuda {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+.ajuda .item {
+  display: flex;
+  align-items: center;
+  color: #004481;
+  margin-bottom: 50px;
+}
+.ajuda .item span {
+  padding-left: 18px;
+}
+
+/* Footer */
+
+.footer {
+  grid-area: footer;
+}
+.footer div {
+  height: 10px;
+  width: 100%;
+  background: #004481;
+  bottom: 0;
+  z-index: 1000;
+  position: fixed;
+}
